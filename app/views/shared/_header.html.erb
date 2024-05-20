@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg" style="background-color:#035096;">
+  <a class="navbar-brand fw-bold fs-2 px-5" href="/" style="color:#fff">Web_Impact</a>
+  <button class="navbar-toggler text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="navbar-toggler-icon"></i>
+      </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-5">
+      <li class="nav-item nav-link fs-5 ">
+        <% if user_signed_in? %>
+         <%= link_to 'My profile' , member_path(current_user) ,class:"nav-item" ,style:"color:#fff" %></li>
+         <% end %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fs-5 fw-bold" aria-current="page" href="/" style="color:#fff">Home</a>
+      </li>
+      <li class="nav-item nav-link fs-5">
+        <%= link_to 'About', about_path, style:"color:#fff" %>
+      </li>
+      <li class="nav-item nav-link fs-5">
+        <% if current_user&.admin? %>
+          <%= link_to 'Course', admin_syllabuses_path, style:"color:#fff" %>
+        <% else %>
+          <%= link_to 'Course', syllabuses_path, style:"color:#fff" %>
+        <% end %>
+      </li>
+      <li class="nav-item nav-link fs-5">
+        <%= link_to 'Contact', contact_index_path, style:"color:#fff" %>
+      </li>
+      <li class="nav-item nav-link fs-5">
+        <% if user_signed_in? %>
+          <%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class:"active", style:"color:#fff" %>
+        <% else %>
+          <%= link_to 'Log In', new_user_session_path, style:"color:#fff" %>
+        <% end %>
+      </li>
+      <li class="nav-item nav-link fs-5"><%= link_to 'Sign Up', new_user_registration_path, style:"color:#fff" %>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,5 @@
+<h1 class="text-center fw-5 text-dark">Test Result</h1>
+<div class="card shadow col-lg-8 mx-auto text-dark mb-5 p-5">
+  <p>Your score is: <%= @score %> out of <%= @test_questions.count %></p>
+  <p><%= link_to 'Back to Test', test_questions_path, class: 'btn btn-primary' %></p>
+</div>

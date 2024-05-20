@@ -1,0 +1,13 @@
+<!-- app/views/quizzes/result.html.erb -->
+<div class="card shadow text-center fw-bold">
+	<h2 class="text-center mt-5">Test Results</h2>
+	<p>Your score: <%= @score %> / <%= @quiz_questions.count %></p>
+	<tr>
+	  <td><%= @current_user.first_name %></td>
+	  <td><%= @current_user.last_name %></td>
+	  <td><%= @current_user.email %></td>
+	</tr>
+	<div class="col-lg-6 mx-auto mt-5 mb-3">
+		<%= link_to 'Back to Quiz' , quiz_path ,class:"btn btn-danger" %>
+	</div>
+</div>

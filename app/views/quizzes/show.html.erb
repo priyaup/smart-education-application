@@ -1,0 +1,28 @@
+<!-- app/views/quizzes/show.html.erb -->
+<h1 class="text-center fw-5 text-dark">This is your pre-requisite Test</h1>
+<div class="card shadow col-lg-8 mx-auto text-dark mb-5 p-5">
+  <%= form_with(url: '/quiz/submit', method: 'post', id: 'quizForm') do |form| %>
+    <% @quiz_questions.each do |quiz| %>
+      <p><strong><%= quiz.question %></strong></p>
+      <% quiz.options.each do |option| %>
+        <%= form.radio_button "answers[#{quiz.id}]", option %>
+        <%= form.label "answers[#{quiz.id}]", option %><br>
+      <% end %>
+    <% end %>
+    
+    <%= form.submit 'Submit Quiz', class:'btn btn-primary mt-5', onclick: 'validateForm()' %>
+  <% end %>
+</div>
+
+<script>
+  function validateForm() {
+    let form = document.getElementById('quizForm');
+    let radios = form.querySelectorAll('input[type="radio"]:checked');
+
+    if (radios.length <= 9) {
+      alert('Please answer all questions before submitting the quiz.');
+      event.preventDefault();
+    }
+  }
+</script>
+  

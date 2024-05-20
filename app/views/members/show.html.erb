@@ -1,0 +1,27 @@
+<div class="col-md-6 mx-auto mt-5 mb-5">
+	<div class="card h-100 shadow">
+    <div class="card-header">
+      <h1 class="text-center">Student Detail</h1>
+    </div>
+		<div class="card-body mb-5 mt-5 px-5">
+      <h5> <strong>Name :</strong> <%= @user.name %></h5>
+      <h5>Email: <%= @user.email %></h5>
+      <h5>Address: <%= @user.address %></h5>
+      <h5>contact: <%= @user.contact %></h5>
+      <h5>Alternate Contact: <%= @user.Alternate_contact %> </h5>
+      <% unless user_signed_in? %>
+        <h5>Learner Type: <%= @user.learner_type %></h5>
+        <%= link_to 'back to Home' , root_path, class:"btn btn-primary" %>
+        <%= link_to 'back to dashboard' , dashboards_path, class:"btn btn-primary" %>
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to 'back to Home' , root_path, class:"btn btn-primary" %>
+        <%= link_to 'Course', syllabuses_path,class:"btn btn-primary" %>
+      <% end %>
+		</div>
+	</div>
+  <div >
+    <canvas id="myChart" width="100" height="100"></canvas>
+    <script src="/assets/dash.js"></script>
+  </div>
+</div>

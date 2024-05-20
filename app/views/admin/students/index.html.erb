@@ -1,0 +1,53 @@
+<!-- Courses -->
+<div id="courses" class="section">
+  <!-- container -->
+  <div class="container">
+    <!-- row -->
+    <div class="row">
+      <div class="section-header text-center">
+        <h2>Explore Students</h2>
+        <p class="lead">
+          By living in books, eloquence comes from the right, and they do not abhor it brilliantly.
+        </p>
+      </div>
+    </div>
+    <!-- /row -->
+
+  </div>
+  <!-- container -->
+  <table class="table table-striped table-sm">
+    <thead>
+      <th>Full Name</th>
+      <th>Father Name</th>
+      <th>Date of Birth</th>
+      <th>Class Name</th>
+      <th>Blood Group</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+      <tr>
+        <td><%= student.full_name %></td>
+        <td><%= student.father_name %></td>
+        <td><%= student.dob %></td>
+        <td><%= student.class_name %></td>
+        <td><%= student.blood_group %></td>
+        <td><%= student.email %></td>
+        <td><%= student.address %></td>
+        <td>
+          <%= link_to 'View', admin_student_path(student), class:'btn btn-primary' %>
+          <%= link_to 'Edit', edit_admin_student_path(student), class:'btn btn-warning', data: { bs_toggle: "modal", bs_target: "#editUserModal" } %>
+          <%= link_to 'Delete',admin_student_path(student), data: { turbo_method: :delete, turbo_confirm: 'Are You Sure to Delete this student?'}, class:'btn btn-danger' %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New Student", new_admin_student_path, class: 'btn btn-success' %> 
+</div>
+<!-- /Courses -->
+
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+</div>

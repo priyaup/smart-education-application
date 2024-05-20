@@ -1,0 +1,26 @@
+<h1 class="text-center fw-5 text-dark">This is your Assessment Test</h1>
+<div class="card shadow col-lg-8 mx-auto text-dark mb-5 p-5">
+  <%= form_with(url: submit_test_questions_path, method: 'post', id: 'quizForm') do |form| %>
+    <% @test_questions.each do |test| %>
+      <p><strong><%= test.question %></strong></p>
+      <% test.options.each do |option| %>
+        <%= form.radio_button "answers[#{test.id}]", option %>
+        <%= form.label "answers[#{test.id}]", option %><br>
+      <% end %>
+    <% end %>
+    
+    <%= form.submit 'Submit Test', class:'btn btn-primary mt-5', onclick: 'validateForm()' %>
+  <% end %>
+</div>
+
+<script>
+  function validateForm() {
+    let form = document.getElementById('quizForm');
+    let radios = form.querySelectorAll('input[type="radio"]:checked');
+
+    if (radios.length < <%= @test_questions.count %>) {
+      alert('Please answer all questions before submitting the test.');
+      event.preventDefault();
+    }
+  }
+</script>

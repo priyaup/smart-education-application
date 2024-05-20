@@ -1,0 +1,26 @@
+<div class="col-lg-12 mb-5">
+ <%= link_to "New Syllabus", new_admin_syllabus_path, class: 'btn btn-outline-primary float-end mb-4' %> 
+ <h2>Syllabus List</h2>
+ <table class="table table-striped table-sm">
+  <thead>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Student Id</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <% @syllabuses.each do |syllabus| %>
+    <tr>
+      <td><%= syllabus.title %></td>
+      <td><%= truncate syllabus.description, length: 50 %></td>
+      <td><%= link_to syllabus.student_id, student_path(syllabus.student)  %></td>
+      <td>
+        <%= link_to 'View', admin_syllabus_path(syllabus), class:'btn btn-primary' %>
+        <%= link_to 'Edit', edit_admin_syllabus_path(syllabus), class:'btn btn-warning' %>
+        <%= link_to 'Delete', admin_syllabus_path(syllabus), data: { turbo_method: :delete, turbo_confirm: 'Are You Sure to Delete this Syllabus ?' }, class:'btn btn-danger' %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

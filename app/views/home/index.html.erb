@@ -1,0 +1,254 @@
+<!-- Home -->
+<div id="home" class="hero-area">
+  <!-- Backgound Image -->
+  <div
+  class="bg-image bg-parallax overlay"
+  style="background-image: url(<%= asset_path('home-background.jpg') %>)"
+  ></div>
+  <!-- /Backgound Image -->
+
+  <div class="home-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <h1 class="white-text fs-1 fw-bold ">Embark on Your Learning Journey Today!</h1>
+          <p class="lead white-text fs-5 fw-bold" >
+            Welcome to a world of endless possibilities and boundless knowledge. At Webimpact, we believe that learning is the key to unlocking your full potential. Are you ready to dive into the world of education and discovery?
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Home -->
+
+<!-- About -->
+<div id="about" class="section ">
+  <!-- container -->
+  <div class="container">
+    <!-- row -->
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <div class="section-header">
+          <h1>Welcome to <span style="color: #035096">Webimpact</span></h1>
+          <p class="text-dark fs-4">
+           At Webimpact, we're dedicated to empowering learners of all ages to reach their full potential.
+          </p>
+        </div>
+    
+        <!-- feature -->
+        <div class="feature">
+          <i class="feature-icon fa fa-flask"></i>
+          <div class="feature-content">
+            <h3 style="color: #035096">Online Courses</h3>
+            <p class="mb-5 fs-4 text-dark">Explore our comprehensive courses in, crafted to provide you with the skills you need to succeed in the digital age.</p>
+          </div>
+        </div>
+        <!-- /feature -->
+    
+        <!-- feature -->
+        <div class="feature">
+          <i class="feature-icon fa fa-users"></i>
+          <div class="feature-content">
+            <h3 style="color: #035096">Fun Learning</h3>
+            <p class="mb-5 fs-4 text-dark">
+              Learn from the best! ensuring you receive top-notch education and guidance.
+            </p>
+          </div>
+        </div>
+        <!-- /feature -->
+    
+        <!-- feature -->
+        <div class="feature">
+          <i class="feature-icon fa fa-comments"></i>
+          <div class="feature-content">
+            <h3 style="color: #035096">Community</h3>
+            <p class="mb-5 fs-4 text-dark">
+              Join our vibrant learning community and grow together as part of the Webimpact family.
+            </p>
+          </div>
+        </div>
+        <!-- /feature -->
+      </div>
+    
+      <div class="col-md-6 mt-5 mb-5">
+        <div class="about-img mt-5">
+          <%= image_tag 'about' %>
+        </div>
+      </div>
+    </div>
+    
+    <!-- row -->
+  </div>
+  <!-- container -->
+</div>
+<!-- /About -->
+
+<!-- Courses -->
+<div id="courses" class="section">
+  <!-- container -->
+  <div class="container">
+    <!-- row -->
+    <div class="row">
+      <div class="section-header text-center">
+        <h2 class="fs-1">Explore <span style="color: #035096">Courses</span></h2>
+        <h3 class="mb-5  mt-5">Embark on your journey to mastery with our Complete Web Development course covering <span style="color: #481B5F;"><b>HTML, CSS, JavaScript,</b></span> and more.</h3>
+      </div>
+    </div>
+    
+    <!-- /row -->
+
+    <!-- courses -->
+    <div id="courses-wrapper mb-5">
+      <!-- row -->
+      <div class="row row-cols-1 row-cols-md-3 text-center g-3">
+        <!-- single course -->
+        <div class="col-md-3 col-sm-6 col-xs-6 ">
+          <div class="course" style=" border: 1px solid #CACFD6; border-radius:10px 10px;  box-shadow: 3px 3px 3px 3px; padding-bottom: 20px;">
+            <a href="#" class="course-img">
+              <%= image_tag 'course01' %>
+              <i class="course-link-icon fa fa-link"></i>
+            </a>
+            <a class="course-title" href="#"
+            >Introduction to HTML</a
+            >
+            <%= link_to 'Enroll Now', syllabuses_path , class:"main-button icon-button" %>
+          </div>
+        </div>
+        <!-- /single course -->
+
+        <!-- single course -->
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="course" style=" border: 1px solid #CACFD6; border-radius:10px 10px;  box-shadow: 3px 3px 3px 3px; padding-bottom: 20px;">
+            <a href="#" class="course-img">
+              <%= image_tag 'course02' %>
+              <i class="course-link-icon fa fa-link"></i>
+            </a>
+            <a class="course-title" href="#">Introduction to CSS </a>
+            <%= link_to 'Enroll Now', syllabuses_path , class:"main-button icon-button" %>
+          </div>
+        </div>
+        <!-- /single course -->
+
+        <!-- single course -->
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="course" style=" border: 1px solid #CACFD6; border-radius:10px 10px;  box-shadow: 3px 3px 3px 3px; padding-bottom: 20px;">
+            <a href="#" class="course-img">
+              <%= image_tag 'course03' %>
+              <i class="course-link-icon fa fa-link"></i>
+            </a>
+            <a class="course-title" href="#">Bootstrap</a>
+             <%= link_to 'Enroll Now', syllabuses_path , class:"main-button icon-button" %>
+          </div>
+        </div>
+        <!-- /single course -->
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="course" style=" border: 1px solid #CACFD6; border-radius:10px 10px;  box-shadow: 3px 3px 3px 3px; padding-bottom: 20px;">
+            <a href="#" class="course-img">
+              <%= image_tag 'course04' %>
+              <i class="course-link-icon fa fa-link"></i>
+            </a>
+            <a class="course-title" href="#">Javascript</a>
+            <%= link_to 'Enroll Now', syllabuses_path , class:"main-button icon-button" %>
+          </div>
+        </div>
+        <!-- /single course -->
+      </div><hr>
+  <!-- container -->
+
+<!-- /Courses -->
+  
+</div>
+<div id="why-us" class="section">
+  <!-- container -->
+  <div class="container">
+    <!-- row -->
+    <div class="row">
+      <div class="section-header text-center">
+        <h2>Why <span style="color: #035096">Web_Impact</span></h2>
+        <p class="text-dark fs-3">
+          At Web_Impact, we're committed to revolutionizing the way you learn and grow. Here's why you should choose us:
+        </p>
+        <div class="mt-5 mb-5">
+          <%= image_tag 'web', style:"height:60%; width:60%;" %>
+        </div>
+      </div>
+
+      <!-- feature -->
+      <div class="col-md-4 mt-5">
+        <div class="feature">
+          <i class="feature-icon fa fa-flask"></i>
+          <div class="feature-content">
+            <h4>Online Courses</h4>
+            <p>
+              Dive into our extensive collection of online courses designed to cater to your learning needs. From beginner to advanced levels, we've got something for everyone.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-5">
+        <div class="feature">
+          <i class="feature-icon fa fa-users"></i>
+          <div class="feature-content">
+            <h4>Expert Teachers</h4>
+            <p>
+              Learn from the best! Our team of expert teachers brings years of experience and passion to the virtual classroom, ensuring that you receive top-notch education and guidance.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- /feature -->
+
+      <!-- feature -->
+      <div class="col-md-4 mt-5">
+        <div class="feature">
+          <i class="feature-icon fa fa-comments"></i>
+          <div class="feature-content">
+            <h4>Community</h4>
+            <p>
+              Join our vibrant learning community and connect with like-minded individuals from around the globe. Share ideas, collaborate on projects, and grow together as part of the Web_Impact family.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- /feature -->
+    </div>
+    <!-- /row -->
+
+    <hr class="section-hr" />
+  </div>
+  <!-- /container -->
+</div>
+
+<!-- /Why us -->
+
+<!-- Contact CTA -->
+<div id="contact-cta" class="section shadow px-5">
+  <!-- Backgound Image -->
+
+  <div
+  class="bg-image bg-parallax overlay"
+  style="background-image: url(<%= asset_path('cta2-background.jpg') %>)"
+  ></div>
+
+  <!-- Backgound Image -->
+
+  <!-- container -->
+  <div class="container card bg-transparent text-light" style="border: none;">
+    <!-- row -->
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 ">
+        <h2 class="text-white">Contact Us</h2>
+        <p class="fs-5">
+          Have questions or need assistance? We're here to help! Feel free to reach out to us for any inquiries or support you may need.
+        </p>
+        <%= link_to 'Contact Us Now', contact_index_path, class: 'main-button icon-button' %>
+      </div>
+    </div>
+    <!-- /row -->
+  </div>
+  
+  <!-- /container -->
+</div>
